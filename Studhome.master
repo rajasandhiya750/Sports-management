@@ -1,0 +1,78 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Studhome.master.cs" Inherits="SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style2
+        {
+            text-align: center;
+        }
+        .style3
+        {
+            width: 0;
+            height: 0;
+        }
+        .style4
+        {
+            width: 215px;
+            height: 195px;
+        }
+    </style>
+</head>
+<body>
+    <form runat="server">
+    <div class="page">
+        <div class="header">
+            <div class="title">
+                <h1 class="style2">
+                    WELCOME STUDENT</h1>
+                <p>
+                    <img alt="XS" class="style3" src="images/vector-users-icon.jpg" /><img alt="DS" 
+                        class="style3" src="images/box-full-sport-equipments_1308-37207.jpg" /><img 
+                        alt="CS" class="style4" 
+                        src="images/image_processing20220801-17461-bujlgd.png" /></p>
+            </div>
+            <div class="loginDisplay">
+            </div>
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/studhome.aspx" Text="Home"/>
+                        <asp:MenuItem Text="EditStudent" Value="EditStudent" 
+                            NavigateUrl="~/editstud.aspx"/>
+                        <asp:MenuItem Text="ViewEquipment" Value="ViewEquipment" 
+                            NavigateUrl="~/vequip.aspx">
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="ViewTeams" Value="ViewTeams" NavigateUrl="~/vteams.aspx">
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="ViewTournament" Value="ViewTournament" 
+                            NavigateUrl="~/vtournament.aspx">
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="ViewPerformance" 
+                            Value="ViewPerformance" NavigateUrl="~/vperform.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Reports" Value="ViewEquipments" 
+                            NavigateUrl="~/reportstud.aspx">
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/login.aspx" Text="Logout" Value="Logout">
+                        </asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        
+    </div>
+    </form>
+</body>
+</html>
